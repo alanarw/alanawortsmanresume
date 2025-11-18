@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Alana Wortsman | Community Engagement & Social Impact Strategist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Community engagement and social impact strategist with experience in partnerships, fundraising, events, social enterprise, and program management." />
+  <style>
+    :root {
+      --primary: #184053;
+      --accent: #e3a846;
+      --light: #f7f5ef;
+      --muted: #607081;
+      --bg: #ffffff;
+      --radius: 14px;
+      --shadow: 0 12px 32px rgba(15, 23, 42, 0.12);
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #fdf6e3, #f1f5f9 45%, #ffffff 80%);
+      color: #0f172a;
+      line-height: 1.6;
+    }
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+    .page {
+      max-width: 1080px;
+      margin: 24px auto 40px;
+      padding: 0 18px;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(12px);
+      border-radius: 999px;
+      margin-bottom: 18px;
+      padding: 8px 20px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 13px;
+    }
+    .brand { font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--primary); font-size: 11px; }
+    nav { display: flex; gap: 12px; flex-wrap: wrap; }
+    nav a {
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: transparent;
+    }
+    nav a:hover {
+      background: #e0f2fe;
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0,2.2fr) minmax(0,1.5fr);
+      gap: 24px;
+      background: rgba(255,255,255,0.95);
+      padding: 24px;
+      border-radius: 26px;
+      box-shadow: var(--shadow);
+      margin-bottom: 28px;
+    }
+    .hero h1 {
+      font-size: 30px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+    .hero h2 {
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+    .hero p { font-size: 14px; margin-bottom: 10px; }
+    .badge-row {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #fef3c7;
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+    .badge-pill {
+      background: #facc15;
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+    }
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .tag {
+      font-size: 11px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #f1f5f9;
+      color: #0f172a;
+    }
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 12px;
+    }
+    .contact-pill {
+      border-radius: 999px;
+      border: 1px solid #e2e8f0;
+      padding: 5px 10px;
+      background: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .hero-photo {
+      min-height: 200px;
+      border-radius: 22px;
+      overflow: hidden;
+      position: relative;
+      background: #0f172a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #e5e7eb;
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+    }
+    .hero-photo span {
+      max-width: 260px;
+    }
+    section { margin-bottom: 28px; }
+    section h3 {
+      font-size: 18px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+    .section-sub {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(210px,1fr));
+      gap: 14px;
+    }
+    .metric {
+      background: rgba(255,255,255,0.98);
+      border-radius: 16px;
+      padding: 14px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 10px 24px rgba(15,23,42,0.08);
+      font-size: 13px;
+    }
+    .metric-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+    .metric-value {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+      gap: 14px;
+    }
+    .skill-card {
+      background: rgba(255,255,255,0.98);
+      border-radius: 16px;
+      padding: 14px;
+      border: 1px solid #e2e8f0;
+      font-size: 13px;
+    }
+    .skill-card h4 {
+      font-size: 13px;
+      margin-bottom: 6px;
+      color: #111827;
+    }
+    .skill-card ul {
+      list-style: none;
+      font-size: 12px;
+      color: #4b5563;
+    }
+    .skill-card li::before {
+      content: "• ";
+      color: #9ca3af;
+    }
+    .exp-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    details.exp {
+      background: rgba(255,255,255,0.98);
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
+      padding: 10px 14px;
+      font-size: 13px;
+      box-shadow: 0 10px 22px rgba(15,23,42,0.06);
+    }
+    details.exp summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    details.exp summary::-webkit-details-marker { display: none; }
+    .exp-main { display: flex; flex-direction: column; }
+    .exp-role { font-weight: 600; color: #111827; }
+    .exp-org { font-size: 13px; color: #1d4ed8; }
+    .exp-meta { font-size: 11px; color: #6b7280; margin-top: 2px; }
+    .exp-pill {
+      font-size: 10px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: #fef3c7;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      white-space: nowrap;
+    }
+    details.exp > div {
+      margin-top: 8px;
+      padding-top: 6px;
+      border-top: 1px dashed #e5e7eb;
+    }
+    details.exp ul { margin-left: 16px; margin-top: 4px; }
+    details.exp li { margin-bottom: 4px; }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+      gap: 12px;
+    }
+    .gal {
+      background:#020617;
+      border-radius:16px;
+      padding:10px 10px 12px;
+      color:#e5e7eb;
+      font-size:12px;
+      box-shadow:0 10px 26px rgba(15,23,42,0.18);
+    }
+    .gal-title {
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:0.12em;
+      margin-bottom:4px;
+      color:#facc15;
+    }
+    .edu-grid {
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      font-size:13px;
+    }
+    .edu-card {
+      background:rgba(255,255,255,0.98);
+      border-radius:14px;
+      padding:10px 12px;
+      border:1px solid #e2e8f0;
+    }
+    .case-studies {
+      margin-top: 10px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+      gap: 10px;
+      font-size: 12px;
+    }
+    .case-card {
+      background: #f9fafb;
+      border-radius: 12px;
+      padding: 10px 12px;
+      border: 1px dashed #e5e7eb;
+    }
+    footer {
+      font-size: 11px;
+      color: #9ca3af;
+      text-align: center;
+      margin-top: 22px;
+    }
+    @media (max-width: 780px) {
+      header { border-radius: 18px; flex-direction: column; align-items: flex-start; }
+      .hero { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="brand">ALANA WORTSMAN · SOCIAL IMPACT</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#impact">Impact</a>
+      <a href="#experience">Experience</a>
+      <a href="#gallery">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="about">
+    <div>
+      <h1>ALANA WORTSMAN</h1>
+      <h2>Community Engagement &amp; Social Impact Strategist</h2>
+
+      <div class="badge-row">
+        <span class="badge-pill">Mission-driven leader</span>
+        <span>Building programs, partnerships &amp; campaigns that move people to act.</span>
+      </div>
+
+      <p>
+        I’m a community engagement and social impact leader with experience across nonprofit, public, and private sectors.
+        I specialize in building partnerships, coordinating high-impact events, and turning mission and data into
+        sustainable, people-centered programs.
+      </p>
+
+      <div class="hero-tags">
+        <span class="tag">Community Engagement</span>
+        <span class="tag">Social Impact Strategy</span>
+        <span class="tag">Public–Private Partnerships</span>
+        <span class="tag">Fundraising &amp; Events</span>
+        <span class="tag">Program Development</span>
+        <span class="tag">Volunteer &amp; Stakeholder Management</span>
+      </div>
+
+      <div class="contact-row">
+        <span class="contact-pill">📍 Florida, USA · Open to relocation</span>
+        <span class="contact-pill">📞 516-456-3508</span>
+        <span class="contact-pill">✉️ <a href="mailto:awortsman18@gmail.com">awortsman18@gmail.com</a></span>
+        <span class="contact-pill">🔗 <a href="https://www.linkedin.com/in/alanawortsman" target="_blank">linkedin.com/in/alanawortsman</a></span>
+      </div>
+    </div>
+
+    <div class="hero-photo">
+      <!-- Replace this with an <img> tag if hosting your headshot online -->
+      <span>Headshot here: Community-focused, warm, and mission-driven leader in social impact and partnerships.</span>
+    </div>
+  </section>
+
+  <section id="impact">
+    <h3>Impact Snapshot</h3>
+    <p class="section-sub">Key metrics from campaigns, programs, and partnerships I’ve helped lead.</p>
+    <div class="metrics-grid">
+      <div class="metric">
+        <div class="metric-label">fundraising &amp; campaigns</div>
+        <div class="metric-value">$582,000 raised in six months</div>
+        <div>Directed March of Dimes March for Babies campaign, achieving a 9% year-over-year increase.</div>
+      </div>
+      <div class="metric">
+        <div class="metric-label">community relief</div>
+        <div class="metric-value">15,000+ families served</div>
+        <div>Coordinated free grocery distributions and Summer BreakSpot events during COVID-19 in South Florida.</div>
+      </div>
+      <div class="metric">
+        <div class="metric-label">partner retention</div>
+        <div class="metric-value">100% retention</div>
+        <div>Maintained all Florida public/private partnerships at Circuit Microtransit through proactive engagement and data-driven service.</div>
+      </div>
+      <div class="metric">
+        <div class="metric-label">social enterprise</div>
+        <div class="metric-value">$25K+ projected revenue</div>
+        <div>Created and launched Jack &amp; Jill Center’s first social enterprise, the 1315 Kitchen.</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h3>Core Skills</h3>
+    <p class="section-sub">Blending relationship-building, program strategy, and data-informed decision-making.</p>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h4>Community Engagement &amp; Partnerships</h4>
+        <ul>
+          <li>Community outreach &amp; advocacy</li>
+          <li>Nonprofit, public, and corporate partnerships</li>
+          <li>Volunteer &amp; staff management</li>
+          <li>Young professional &amp; C-suite committees</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h4>Social Impact &amp; Programs</h4>
+        <ul>
+          <li>Program development &amp; implementation</li>
+          <li>Social impact strategies &amp; CSR initiatives</li>
+          <li>Equity-focused initiatives (R.E.A.C.H.)</li>
+          <li>Grant identification &amp; support</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h4>Events, Fundraising &amp; Communications</h4>
+        <ul>
+          <li>Large-scale walks, races &amp; community events</li>
+          <li>Special events &amp; fundraising campaigns</li>
+          <li>Donor engagement &amp; stewardship</li>
+          <li>Public speaking, storytelling, press &amp; media</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h4>Data, Operations &amp; Tools</h4>
+        <ul>
+          <li>Budgeting &amp; forecasting</li>
+          <li>Data analytics &amp; reporting</li>
+          <li>CRM platforms: Raiser's Edge, Salesforce, Blackbaud</li>
+          <li>Dashboards / Tableau &amp; metrics tracking</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h3>Experience</h3>
+    <p class="section-sub">Click each role to view responsibilities, metrics, and highlights.</p>
+    <div class="exp-list">
+
+      <details class="exp" open>
+        <summary>
+          <div class="exp-main">
+            <span class="exp-role">Public Partnerships Manager</span>
+            <span class="exp-org">Circuit · Microtransit Sustainable Transportation Solutions</span>
+            <span class="exp-meta">Fort Lauderdale, FL · Aug 2022 – Present</span>
+          </div>
+          <span class="exp-pill">Public–Private Partnerships</span>
+        </summary>
+        <div>
+          <ul>
+            <li>Serve as key liaison and spokesperson for all Florida public/private partnerships, aligning microtransit services with community and mobility goals.</li>
+            <li>Maintain a <strong>100% customer retention rate</strong> through proactive relationship management and service optimization.</li>
+            <li>Collaborate with cross-functional teams to ensure services meet community needs and equity priorities.</li>
+            <li>Lead community engagement, events, media relations, and outreach to drive awareness and ridership.</li>
+            <li>Deliver and analyze data reports, translating insights into actionable recommendations for partners and internal stakeholders.</li>
+            <li>Identify and support strategic grant opportunities to expand access to sustainable transportation.</li>
+            <li>Build partnerships with local nonprofits to connect social impact, sustainability, and transportation initiatives.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="exp">
+        <summary>
+          <div class="exp-main">
+            <span class="exp-role">Business Development Manager</span>
+            <span class="exp-org">Jack &amp; Jill Center · Early Childhood Education &amp; Family Strengthening</span>
+            <span class="exp-meta">Fort Lauderdale, FL · Dec 2018 – Aug 2022</span>
+          </div>
+          <span class="exp-pill">Social Enterprise &amp; CSR</span>
+        </summary>
+        <div>
+          <ul>
+            <li>Managed all aspects of the Corporate Partners Program, serving as primary contact to help partners achieve social impact and CSR goals.</li>
+            <li>Onboarded <strong>5 new corporate partners</strong>, driving a <strong>16% year-over-year increase</strong> in program participation.</li>
+            <li>Created and launched the <strong>1315 Kitchen</strong>, the organization’s first social enterprise, projected to generate <strong>$25,000+ in new annual revenue</strong>.</li>
+            <li>During COVID-19, led the “Run for the Kids” virtual race (raised $10,000+ and engaged 200+ participants) and coordinated free grocery distributions and Summer BreakSpot events serving <strong>15,000+ families and children</strong>.</li>
+            <li>Led the Young Professionals Committee and its fundraising events, raising $10,000 annually and recruiting eight new members.</li>
+            <li>Founding member of the <strong>R.E.A.C.H. (Racial Equity, Awakening, Community, Hope) Board/Committee</strong>.</li>
+            <li>Oversaw the ReadingPals Program in partnership with United Way, advancing literacy and mentorship.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="exp">
+        <summary>
+          <div class="exp-main">
+            <span class="exp-role">Community Engagement Coordinator</span>
+            <span class="exp-org">Feeding South Florida · Feeding America Network</span>
+            <span class="exp-meta">Pembroke Park, FL · Dec 2016 – Dec 2018</span>
+          </div>
+          <span class="exp-pill">Hunger Relief</span>
+        </summary>
+        <div>
+          <ul>
+            <li>Directed and executed special events, Food + Fund Drives, and third-party events to support hunger relief.</li>
+            <li>Exceeded the <strong>2018 Outrun Hunger 5K</strong> goal by increasing participation by <strong>220 participants</strong> year over year.</li>
+            <li>Delivered in-person presentations and guided tours for employee groups, service organizations, schools, and religious groups.</li>
+            <li>Represented Feeding South Florida at community functions to deepen partnerships and awareness.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="exp">
+        <summary>
+          <div class="exp-main">
+            <span class="exp-role">Community Manager, Relay for Life</span>
+            <span class="exp-org">American Cancer Society</span>
+            <span class="exp-meta">Key West, FL · Mar 2015 – Dec 2016</span>
+          </div>
+          <span class="exp-pill">Event Leadership</span>
+        </summary>
+        <div>
+          <ul>
+            <li>Managed a top-10 Relay for Life event in Florida out of more than 300 events statewide.</li>
+            <li>Surpassed event goals for the first time in three years, achieving a <strong>4% year-over-year income increase</strong> in 2016.</li>
+            <li>Recruited and coached a C-suite leadership team to drive fundraising, outreach, and advocacy.</li>
+            <li>Coordinated volunteers, logistics, and community engagement across the event lifecycle.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="exp">
+        <summary>
+          <div class="exp-main">
+            <span class="exp-role">Community Director, March for Babies</span>
+            <span class="exp-org">March of Dimes</span>
+            <span class="exp-meta">West Palm Beach, FL · Nov 2013 – Mar 2015</span>
+          </div>
+          <span class="exp-pill">Major Campaigns</span>
+        </summary>
+        <div>
+          <ul>
+            <li>Raised <strong>$582,000 in six months</strong>, achieving a 9% year-over-year increase.</li>
+            <li>Directed a fundraising walk with 300+ teams and over <strong>4,000 attendees</strong>, including corporate, family, school, and individual teams.</li>
+            <li>Recruited, trained, and managed C-suite committees from the region’s largest employers to champion the campaign.</li>
+          </ul>
+        </div>
+      </details>
+
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h3>Visual Highlights</h3>
+    <p class="section-sub">A snapshot of programs, campaigns, and community initiatives I’ve helped bring to life.</p>
+    <div class="gallery">
+      <div class="gal">
+        <div class="gal-title">1315 Kitchen · Social Enterprise</div>
+        <div>Launched Jack &amp; Jill Center’s first social enterprise to generate sustainable revenue while serving children and families.</div>
+      </div>
+      <div class="gal">
+        <div class="gal-title">Run for the Kids · Virtual Race</div>
+        <div>Designed a virtual race that raised $10,000+ and engaged 200+ participants during COVID-19.</div>
+      </div>
+      <div class="gal">
+        <div class="gal-title">COVID-19 Grocery Distributions</div>
+        <div>Coordinated meal and grocery distributions and Summer BreakSpot events serving more than 15,000 families and children.</div>
+      </div>
+      <div class="gal">
+        <div class="gal-title">Ride to Vote · Mobility Access</div>
+        <div>Supported microtransit partnerships that removed transportation barriers to civic engagement and voting.</div>
+      </div>
+      <div class="gal">
+        <div class="gal-title">Hunger Relief &amp; Emergency Response</div>
+        <div>Worked alongside volunteers and staff to support large-scale hunger relief and emergency logistics at Feeding South Florida.</div>
+      </div>
+      <div class="gal">
+        <div class="gal-title">March for Babies · Large-Scale Event</div>
+        <div>Directed one of the region’s largest fundraising walks with thousands of participants and hundreds of teams.</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h3>Education &amp; Training</h3>
+    <div class="edu-grid">
+      <div class="edu-card">
+        <strong>B.S., Communications</strong><br/>
+        State University of New York College at Oneonta · 2012
+      </div>
+      <div class="edu-card">
+        <strong>Building an Extraordinary Culture Through Leadership</strong><br/>
+        Certification · Children’s Services Council, Fort Lauderdale · 2021
+      </div>
+      <div class="edu-card">
+        <strong>Racial Equity Institute Workshop</strong><br/>
+        2022
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h3>Case Study Spotlights &amp; Contact</h3>
+    <p class="section-sub">A few brief examples of the type of work and outcomes I care deeply about.</p>
+    <div class="case-studies">
+      <div class="case-card">
+        <strong>1315 Kitchen · Social Enterprise</strong><br/>
+        Created and launched a social enterprise at Jack &amp; Jill Center, projected to generate $25,000+ in new annual revenue while supporting children and families.
+      </div>
+      <div class="case-card">
+        <strong>Run for the Kids · Event Innovation</strong><br/>
+        Designed and led a virtual race that raised over $10,000 and engaged more than 200 participants during the COVID-19 pandemic.
+      </div>
+      <div class="case-card">
+        <strong>Community Relief · COVID-19 Response</strong><br/>
+        Helped coordinate free meal and grocery distributions and Summer BreakSpot events serving 15,000+ families and children across South Florida.
+      </div>
+    </div>
+
+    <p style="margin-top:14px;font-size:13px;">
+      I’m open to roles in community engagement, social impact, partnerships, public–private collaborations, and program leadership (remote or relocation).
+      I’d love to explore how I can support your mission and community.
+    </p>
+
+    <p style="font-size:13px;margin-top:6px;">
+      📞 516-456-3508 · ✉️ <a href="mailto:awortsman18@gmail.com">awortsman18@gmail.com</a> ·
+      🔗 <a href="https://www.linkedin.com/in/alanawortsman" target="_blank">linkedin.com/in/alanawortsman</a>
+    </p>
+  </section>
+
+  <footer>
+    Interactive résumé · Best viewed on desktop and mobile · Text structured to be readable by AI and ATS tools.
+  </footer>
+
+</div>
+</body>
+</html>
